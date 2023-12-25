@@ -1,0 +1,41 @@
+<configuration>
+    <!-- jdbc 连接的 URL -->
+    <property>
+        <name>javax.jdo.option.ConnectionURL</name>
+        <value>jdbc:mysql://hadoop01:3306/hive?createDatabaseIfNotExist=true&amp;characterEncoding=UTF-8&amp;useSSL=false</value>
+    </property>
+    <!-- jdbc 连接的 Driver-->
+    <property>
+        <name>javax.jdo.option.ConnectionDriverName</name>
+        <value>com.mysql.jdbc.Driver</value>
+    </property>
+    <!-- jdbc 连接的 username-->
+    <property>
+        <name>javax.jdo.option.ConnectionUserName</name>
+        <value>root</value>
+    </property>
+    <!-- jdbc 连接的 password -->
+    <property>
+        <name>javax.jdo.option.ConnectionPassword</name>
+        <value>123456</value>
+    </property>
+    <!-- Hive 默认在 HDFS 的工作目录 -->
+    <property>
+        <name>hive.metastore.warehouse.dir</name>
+        <value>/user/hive/warehouse</value>
+    </property>
+    <!-- 指定存储元数据要连接的地址 -->
+    <property>
+        <name>hive.metastore.uris</name>
+        <value>thrift://hadoop01:9083</value>
+    </property>
+    <!--显示数据库名列明-->
+    <property>
+        <name>hive.cli.print.current.db</name>
+        <value>true</value>
+    </property>
+    <property>
+        <name>hive.cli.print.header</name>
+        <value>true</value>
+    </property>
+</configuration>
