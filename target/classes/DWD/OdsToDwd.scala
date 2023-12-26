@@ -1,9 +1,8 @@
 import Utils.appConfig
-import org.apache.spark.sql.SparkSession
 import org.apache.spark.sql.functions.lit
 
 import java.text.SimpleDateFormat
-import java.util.{Calendar, Properties}
+import java.util.Calendar
 
 /**
  * @program: BigData

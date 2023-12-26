@@ -1,7 +1,7 @@
 package ADS
 
 import Utils.appConfig
-import org.apache.spark.sql.Row
+
 import java.util.Properties
 
 /**
@@ -20,7 +20,6 @@ object caseWhen {
     temp.put("user", "root")
     temp.put("password", "123456")
     temp.put("driver", "com.mysql.jdbc.Driver")
-    import spark.implicits._
 
 //    +-------------+------+
 //    | province_name | Amount |

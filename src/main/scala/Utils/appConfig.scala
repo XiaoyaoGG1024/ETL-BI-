@@ -18,8 +18,9 @@ object appConfig {
       .builder()
       .master(master)
       .appName(appName)
-      .config("spark.sql.warehouse.dir", "hdfs://hadoop01:9000/user/hive/warehouse")
-      .config("hive.metastore.uris", "thrift://hadoop01:9083")
+      .config("spark.sql.warehouse.dir", "hdfs://hadoop01:9000/user/hive/warehouse") //db地址
+      .config("hive.metastore.uris", "thrift://hadoop01:9083")  //元数据
+      .config("spark.sql.parquet.writeLegacyFormat","true") //解决类型精度问题
       .enableHiveSupport()
       .getOrCreate()
 

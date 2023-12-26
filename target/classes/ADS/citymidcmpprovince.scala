@@ -1,6 +1,7 @@
 package ADS
 
 import Utils.appConfig
+
 import java.util.Properties
 /**
  * Created with IntelliJ IDEA.
@@ -18,7 +19,6 @@ object citymidcmpprovince {
     temp.put("user", "root")
     temp.put("password", "123456")
     temp.put("driver", "com.mysql.jdbc.Driver")
-    import spark.implicits._
 
 //        CREATE TABLE citymidcmpprovince
 //        (

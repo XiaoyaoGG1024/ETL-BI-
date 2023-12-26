@@ -10,7 +10,7 @@ package test
  * @version: 1.0
  */
 
-import org.apache.spark.sql.SparkSession
+import Utils.appConfig
 import org.apache.spark.sql.functions.udf
 
 object pro {
@@ -19,14 +19,7 @@ object pro {
   def main(args: Array[String]): Unit = {
     System.setProperty("HADOOP_USER_NAME", "root")
 
-    val spark = SparkSession
-      .builder()
-      .master("local[*]")
-      .appName("regiontopthree")
-      .config("spark.sql.warehouse.dir", "hdfs://hadoop01:9000/user/hive/warehouse")
-      .config("hive.metastore.uris", "thrift://hadoop01:9083")
-      .enableHiveSupport()
-      .getOrCreate()
+    val spark=appConfig.setupSparkSession("local[*]","test")
 
     // 创建一个DataFrame，包含示例数据
     val data = Seq(

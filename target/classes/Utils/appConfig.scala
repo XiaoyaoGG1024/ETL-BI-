@@ -20,6 +20,7 @@ object appConfig {
       .appName(appName)
       .config("spark.sql.warehouse.dir", "hdfs://hadoop01:9000/user/hive/warehouse")
       .config("hive.metastore.uris", "thrift://hadoop01:9083")
+      .config("spark.sql.parquet.writeLegacyFormat","true")
       .enableHiveSupport()
       .getOrCreate()
 
